@@ -1,7 +1,12 @@
-<p>home-page works!</p>
 
-<div *ngFor="let car of cars">
-  <p><img src="{{ car.img }}"></p>
-  <p>{{ car.type }}</p>
-  <p>{{ car.color }}</p>
+<div class="row" id=carCards>
+  <div *ngFor="let car of cars">
+    <div class="card" style="width: 19rem;">
+    <img src="{{ car.img }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ car.type }}</h5>
+      <p class="card-text">{{ car.color }}</p>
+    </div>
+  </div>
+  </div>
 </div>

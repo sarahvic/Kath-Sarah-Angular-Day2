@@ -1,0 +1,16 @@
+img {
+  width: 290px;
+  height:200px;
+  padding-left: 14px;
+  padding-top: 14px;
+}
+
+#carCards {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.card{
+  margin-right: 25px;
+}

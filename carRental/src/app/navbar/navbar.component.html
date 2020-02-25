@@ -1,13 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">{{projectName}}</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex align-items-center">
+  <a class="navbar-brand" id="name" href="#">{{projectName}}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink = "/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link active" href="#">Contact Us</a>
-      <a class="nav-item nav-link active" href="#">Donate €10</a>
+      <a class="nav-item nav-link active p-3" routerLink = "/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active p-3" routerLink = "/contact">Contact Us</a>
+      <button class="nav-item nav-link active btn p-3" id="btnNav" (click)="countClick()">{{BtnText}}</button>
+      <a class="nav-item nav-link active p-3" *ngIf="clickCounter > 9" >
+          You've donated: € {{ clickCounter }}
+      </a>
+      <a class="nav-item nav-link active p-3" *ngIf="clickCounter > 199" >
+          VIP Member!
+      </a>
     </div>
   </div>
 </nav>
